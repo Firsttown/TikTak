@@ -22,7 +22,7 @@ $g.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQuality
 $g.DrawImage($img, 0, 0, $width, $height)
 
 # 8 символов от светлого к тёмному
-$chars = [char[]]" .:-=+*#%"
+$chars = [char[]]" ⸗□⁞░▒▓█"
 $outPath = $fd.FileName -replace '\.\w+$', '_ascii.txt'
 
 # Очищаем файл перед записью
