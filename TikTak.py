@@ -44,7 +44,7 @@ current_state = STATE_AUTH
 user_data = {
     "telegram_username": "",
     "chat_id": None,
-    "bot_token": "6276440729:AAFxvHeRXUsUmf4RHpthKU_u_hFpxXczeho",  #@RadGL_bot для начала работы нужно будет отправить боту /start
+    "bot_token": "YOUR_TOKEN",  
     "game_stats": {"wins": 0, "losses": 0, "draws": 0}
 }
 
