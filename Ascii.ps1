@@ -21,8 +21,8 @@ $g = [System.Drawing.Graphics]::FromImage($bmp)
 $g.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
 $g.DrawImage($img, 0, 0, $width, $height)
 
-# 8 символов от светлого к тёмному
-$chars = [char[]]" ⸗□⁞░▒▓█"
+# 8 символов от темного к светлому
+$chars = [char[]]"█▓▒░⁞□⸗ "
 $outPath = $fd.FileName -replace '\.\w+$', '_ascii.txt'
 
 # Очищаем файл перед записью
@@ -37,7 +37,7 @@ for($y=0; $y -lt $height; $y++) {
         $line += $chars[$idx]
     }
     # Запись построчно, чтобы не зависеть от памяти
-    Add-Content -Path $outPath -Value $line -Encoding ASCII
+    Add-Content -Path $outPath -Value $line -Encoding UTF8
     Write-Progress -Activity "Конвертация" -PercentComplete (($y/$height)*100)
 }
 
